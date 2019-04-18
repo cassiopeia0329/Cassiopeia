@@ -85,7 +85,6 @@
 				78E0076B0CC9EC251388D40A /* Pods-Cassiopeia.debug.xcconfig */,
 				4276DC6BF8069F4D092E48D6 /* Pods-Cassiopeia.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -364,7 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PCCJ4VTLL5;
+				DEVELOPMENT_TEAM = SUD26V2748;
 				INFOPLIST_FILE = Cassiopeia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,7 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PCCJ4VTLL5;
+				DEVELOPMENT_TEAM = SUD26V2748;
 				INFOPLIST_FILE = Cassiopeia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
