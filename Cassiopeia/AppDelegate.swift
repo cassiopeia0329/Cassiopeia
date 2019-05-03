@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Connect the client side application with the parse server
         Parse.initialize(
             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-                configuration.applicationId = "Cassiopeia"
-                configuration.server = ""
+                configuration.applicationId = "Parstagram"
+                configuration.server = "https://intense-earth-85223.herokuapp.com/parse"
             })
         )
         
