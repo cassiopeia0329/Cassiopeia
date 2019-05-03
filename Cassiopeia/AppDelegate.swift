@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Connect the client side application with the parse server
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "Cassiopeia"
+                configuration.server = ""
+            })
+        )
+        
+        // Check to see if the parse user is logged in
+        if PFUser.current() != nil {
+            // If the user is already logged in, switch to the feed view controller
+            // Main is just the storyboard name, each storyboard is for different regions of the app
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            
+            // Create an instance of the feed view controller
+            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
+            
+            // there is one window per application, this is like the only use case for it. Use it so that if the user is logged in, the app opens directly to the feed view
+            window?.rootViewController = feedNavigationController
+        }
+        
         return true
     }
 
