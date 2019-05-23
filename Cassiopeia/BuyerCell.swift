@@ -1,5 +1,5 @@
 //
-//  ArtCell.swift
+//  BuyerCell.swift
 //  Cassiopeia
 //
 //  Created by stargaze on 5/23/19.
@@ -8,15 +8,10 @@
 
 import UIKit
 
-class ArtCell: UITableViewCell {
-    
+class BuyerCell: UITableViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var artistLabel: UILabel!
-    @IBOutlet weak var artTitleLabel: UILabel!
-    @IBOutlet weak var artImageView: UIImageView!
-    
-//    profileImageView.layer.cornerRadius = 20.0
-//    profileImageView.clipsToBounds = true
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var offerLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

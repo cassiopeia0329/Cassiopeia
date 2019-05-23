@@ -22,6 +22,8 @@
 		5693F7FA229700150043EC9F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5693F7F9229700150043EC9F /* ProfileViewController.swift */; };
 		5693F7FC229700220043EC9F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5693F7FB229700220043EC9F /* SettingsViewController.swift */; };
 		56D7546322970EBF0044B7ED /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7546222970EBE0044B7ED /* ArtCell.swift */; };
+		56D7546722973AFF0044B7ED /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7546622973AFF0044B7ED /* MoreInfoViewController.swift */; };
+		56D7546922973D2E0044B7ED /* BuyerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D7546822973D2E0044B7ED /* BuyerCell.swift */; };
 		B899FAC384165001FA6AF4A7 /* Pods_Cassiopeia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD5D47F5F642AC1A1B3AEB2 /* Pods_Cassiopeia.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		5693F7F9229700150043EC9F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5693F7FB229700220043EC9F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		56D7546222970EBE0044B7ED /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
+		56D7546622973AFF0044B7ED /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		56D7546822973D2E0044B7ED /* BuyerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerCell.swift; sourceTree = "<group>"; };
 		78E0076B0CC9EC251388D40A /* Pods-Cassiopeia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cassiopeia.debug.xcconfig"; path = "Target Support Files/Pods-Cassiopeia/Pods-Cassiopeia.debug.xcconfig"; sourceTree = "<group>"; };
 		EAD5D47F5F642AC1A1B3AEB2 /* Pods_Cassiopeia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cassiopeia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,9 +90,11 @@
 				560BF6BC22614260005ADFF4 /* Main.storyboard */,
 				5672367A227CEE32004594F8 /* Sara.storyboard */,
 				56D7546222970EBE0044B7ED /* ArtCell.swift */,
+				56D7546822973D2E0044B7ED /* BuyerCell.swift */,
 				565FDD6F227CF34B00E39E93 /* LoginViewController.swift */,
 				5693F7F12296EB8A0043EC9F /* SignUpViewController.swift */,
 				565FDD71227CF9FC00E39E93 /* FeedViewController.swift */,
+				56D7546622973AFF0044B7ED /* MoreInfoViewController.swift */,
 				5693F7F32296FFDD0043EC9F /* SearchViewController.swift */,
 				5693F7F52296FFFC0043EC9F /* UploadViewController.swift */,
 				5693F7F7229700090043EC9F /* MessagesViewController.swift */,
@@ -254,6 +260,8 @@
 				565FDD72227CF9FC00E39E93 /* FeedViewController.swift in Sources */,
 				560BF6B922614260005ADFF4 /* AppDelegate.swift in Sources */,
 				5693F7FA229700150043EC9F /* ProfileViewController.swift in Sources */,
+				56D7546922973D2E0044B7ED /* BuyerCell.swift in Sources */,
+				56D7546722973AFF0044B7ED /* MoreInfoViewController.swift in Sources */,
 				5693F7F8229700090043EC9F /* MessagesViewController.swift in Sources */,
 				5693F7F22296EB8A0043EC9F /* SignUpViewController.swift in Sources */,
 			);

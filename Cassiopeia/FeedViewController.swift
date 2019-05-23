@@ -77,14 +77,22 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        // Find the selected art
+        let cell = sender as! UITableViewCell // cast the sender as the UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)! // tableview knows for a given cell what the index path is
+        let artwork = artworks[indexPath.row] // finally access the array
+        let user = artwork["artist"] as! PFUser
+        
+        // Pass the selected art to the details view controller
+        let detailsViewController = segue.destination as! MoreInfoViewController
+        detailsViewController.artwork = artwork
+        detailsViewController.user = user
+        tableView.deselectRow(at: indexPath, animated: true) // deselect the row so that it's only highlighted briefly when you select it.
     }
-    */
+
 
 }
