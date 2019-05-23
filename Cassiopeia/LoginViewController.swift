@@ -20,21 +20,21 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func onSignUp(_ sender: Any) {
-        // On Sign Up create a Parse User
-        let user = PFUser() //Make this a constant by using let
-        user.username = usernameField.text
-        user.password = passwordField.text
-        
-        // Sign up user
-        user.signUpInBackground { (success, error) in
-            if success {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            } else {
-                print("Error: \(error?.localizedDescription)")
-            }
-        }
-    }
+//    @IBAction func onSignUp(_ sender: Any) {
+//        // On Sign Up create a Parse User
+//        let user = PFUser() //Make this a constant by using let
+//        user.username = usernameField.text
+//        user.password = passwordField.text
+//        
+//        // Sign up user
+//        user.signUpInBackground { (success, error) in
+//            if success {
+//                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+//            } else {
+//                print("Error: \(error?.localizedDescription)")
+//            }
+//        }
+//    }
     
     @IBAction func onSIgnIn(_ sender: Any) {
         let username = usernameField.text!
