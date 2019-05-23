@@ -98,34 +98,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Medium" borderStyle="roundedRect" placeholder="Artwork Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAE-XN-8Ms">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medium" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAE-XN-8Ms">
                                 <rect key="frame" x="40" y="560" width="181" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" borderStyle="roundedRect" placeholder="Artwork Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZq-m2-E1c">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZq-m2-E1c">
                                 <rect key="frame" x="40" y="598" width="181" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date Created" borderStyle="roundedRect" placeholder="Artwork Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRm-W5-BUG">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Created" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRm-W5-BUG">
                                 <rect key="frame" x="40" y="636" width="181" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AddArtIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3W6-dE-giA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3W6-dE-giA">
                                 <rect key="frame" x="39" y="213" width="336" height="265"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="s6K-je-jy0" appends="YES" id="Iv4-pX-QR7"/>
-                                    <outletCollection property="gestureRecognizers" destination="s6K-je-jy0" appends="YES" id="wbE-Vq-DRw"/>
+                                    <outletCollection property="gestureRecognizers" destination="dQr-1X-XGX" appends="YES" id="sde-mt-mqj"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9N-ZO-cy0">
@@ -134,14 +133,6 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="onSubmitButton:" destination="tRn-YB-Yqb" eventType="touchUpInside" id="f4S-N4-LJd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu9-F7-65H">
-                                <rect key="frame" x="303" y="152" width="72" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="AddArtFilledIcon"/>
-                                <connections>
-                                    <action selector="onCamera:" destination="tRn-YB-Yqb" eventType="touchUpInside" id="8pR-hl-v47"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -158,9 +149,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7d-Lg-ZID" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="s6K-je-jy0">
+                <tapGestureRecognizer id="dQr-1X-XGX">
                     <connections>
-                        <action selector="onCameraButton:" destination="tRn-YB-Yqb" id="UX4-15-mKT"/>
+                        <action selector="onCameraButton:" destination="tRn-YB-Yqb" id="NQE-f7-yAE"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -189,6 +180,16 @@
                     <view key="view" contentMode="scaleToFill" id="eQA-hl-DGI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw3-rw-N4u">
+                                <rect key="frame" x="93" y="493" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="r5J-Jc-k66" eventType="touchUpInside" id="DWi-52-hGy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kn1-Op-z4B"/>
                     </view>
@@ -196,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2Z-7i-owT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5939" y="682"/>
+            <point key="canvasLocation" x="5937.68115942029" y="681.69642857142856"/>
         </scene>
         <!--Home-->
         <scene sceneID="ssa-iL-7RT">
@@ -207,7 +208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zGq-5Y-dBi">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="350" id="cLb-fo-gUK" customClass="ArtCell" customModule="Cassiopeia" customModuleProvider="target">
@@ -417,11 +418,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AddArtFilledIcon" width="640" height="640"/>
-        <image name="AddArtIcon" width="640" height="640"/>
         <image name="cassiopeia_title" width="640" height="640"/>
+        <image name="image_placeholder" width="375" height="375"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iqR-C6-qQ2"/>
+        <segue reference="Te4-Vy-kee"/>
     </inferredMetricsTieBreakers>
 </document>
