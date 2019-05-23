@@ -31,7 +31,14 @@ class SignUpViewController: UIViewController {
         user.password = passwordField.text
         user["name"] = fullNameField.text
         user.email = emailField.text
-        user["type"] = userTypeSegment.selectedSegmentIndex
+        
+        var userType = "Artist"
+        
+        if userTypeSegment.selectedSegmentIndex == 1{
+            userType = "Buyer"
+        }
+        
+        user["type"] = userType
         
         // Sign up user
         user.signUpInBackground { (success, error) in
