@@ -41,7 +41,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <segue destination="sjd-5i-mP5" kind="presentation" identifier="signUpSegue" id="wc7-h0-IeO"/>
+                                    <segue destination="a5Y-u8-xgl" kind="presentation" identifier="toSignUpSegue" id="wc7-h0-IeO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-55-tAc">
@@ -157,20 +157,43 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="s2a-2y-1xS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Chq-0c-6yk"/>
                     <connections>
                         <outlet property="emailField" destination="sMr-qZ-gFV" id="M3N-f0-VyD"/>
                         <outlet property="fullNameField" destination="JkK-mD-TYG" id="00N-1B-ecI"/>
                         <outlet property="passwordField" destination="AdF-p3-Cmg" id="jAk-Q6-pSM"/>
                         <outlet property="userTypeSegment" destination="8tD-Fc-9o4" id="tv2-18-j7t"/>
                         <outlet property="usernameField" destination="cWv-55-KmE" id="fRB-p8-PoZ"/>
+                        <segue destination="NOc-63-rOh" kind="presentation" identifier="signedUpSegue" id="Te4-Vy-kee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8f-UK-b41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="233"/>
+            <point key="canvasLocation" x="1251" y="232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xQA-O3-SIe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a5Y-u8-xgl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gWB-JD-apf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sjd-5i-mP5" kind="relationship" relationship="rootViewController" id="kKI-U0-gKq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xzm-GM-LQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="232"/>
         </scene>
     </scenes>
     <resources>
         <image name="cassiopeia_title" width="640" height="640"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Te4-Vy-kee"/>
+    </inferredMetricsTieBreakers>
 </document>
