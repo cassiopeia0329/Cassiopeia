@@ -30,18 +30,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
-//        // Check to see if the parse user is logged in
-//        if PFUser.current() != nil {
-//            // If the user is already logged in, switch to the feed view controller
-//            // Main is just the storyboard name, each storyboard is for different regions of the app
-//            let main = UIStoryboard(name: "Sara", bundle: nil)
-//            
-//            // Create an instance of the feed view controller
-//            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
-//            
-//            // there is one window per application, this is like the only use case for it. Use it so that if the user is logged in, the app opens directly to the feed view
-//            window?.rootViewController = feedNavigationController
-//        }
+        // Check to see if the parse user is logged in
+        if PFUser.current() != nil {
+            // If the user is already logged in, switch to the feed view controller
+            // Main is just the storyboard name, each storyboard is for different regions of the app
+            let main = UIStoryboard(name: "Sara", bundle: nil)
+            
+            // Create an instance of the feed view controller
+            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
+            
+            // there is one window per application, this is like the only use case for it. Use it so that if the user is logged in, the app opens directly to the feed view
+            window?.rootViewController = feedNavigationController
+        }
         
         return true
     }

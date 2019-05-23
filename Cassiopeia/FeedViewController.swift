@@ -37,10 +37,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         query.includeKeys(["artist", "title"])
         query.limit = 20
         
-        query.findObjectsInBackground { (posts, error) in
-            // If you find posts, get them and reload the view
-            if posts != nil {
-                self.artworks = artworks
+        query.findObjectsInBackground { (artworks, error) in
+            // If you find artworks, get them and reload the view
+            if artworks != nil {
+                self.artworks = artworks!
                 self.tableView.reloadData()
             }
         }
@@ -51,7 +51,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let artwork = artworks[section]
         
         // Add 2 because we also want to show the "add a comment cell
-        return comments.count + 1
+        return artworks.count + 1
     }
     
     // Give each post a section that can have any number of rows
@@ -64,38 +64,43 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let artwork = artworks[indexPath.section]
         
         // The post cell is always the 0th row, so here we set the post cell
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ArtCell") as! PostCell
-            
-            let user = artworks["artist"] as! PFUser
-            
-            // Set the labels
-            cell.usernameLabel.text = user.username
-            cell.captionLabel.text = post["caption"] as? String
-            
-            let imageFile = post["image"] as! PFFileObject
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)
-            
-            cell.photoView.af_setImage(withURL: url!)
-            
-            return cell
-        } else if indexPath.row <= comments.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
-            
-            let comment = comments[indexPath.row - 1]
-            cell.commentLabel.text = comment["text"] as? String
-            
-            let user = comment["author"] as! PFUser
-            cell.usernameLabel.text = user.username
-            
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
-            return cell
-        }
+        
+//        if indexPath.row == 0 {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArtCell") as! ArtCell
+        
+        let user = artwork["artist"] as! PFUser
+        
+        // Set the labels
+        cell.artistLabel.text = user.username
+        cell.artTitleLabel.text = artwork["title"] as? String
+        
+        let imageFile = artwork["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)
+        
+        cell.artImageView.af_setImage(withURL: url!)
+        
+        return cell
+//        } else if indexPath.row <= comments.count {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
+//
+//            let comment = comments[indexPath.row - 1]
+//            cell.commentLabel.text = comment["text"] as? String
+//
+//            let user = comment["author"] as! PFUser
+//            cell.usernameLabel.text = user.username
+//
+//            return cell
+//        } else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
+//            return cell
+//        }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        do something when this row is selected
+//        let post = posts[indexPath.section]
+    }
 
     /*
     // MARK: - Navigation

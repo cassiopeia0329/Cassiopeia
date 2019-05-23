@@ -90,14 +90,81 @@
                     <view key="view" contentMode="scaleToFill" id="vsj-UP-eom">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artwork Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VC6-C7-By3">
+                                <rect key="frame" x="20" y="121" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Medium" borderStyle="roundedRect" placeholder="Artwork Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAE-XN-8Ms">
+                                <rect key="frame" x="40" y="560" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" borderStyle="roundedRect" placeholder="Artwork Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MZq-m2-E1c">
+                                <rect key="frame" x="40" y="598" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date Created" borderStyle="roundedRect" placeholder="Artwork Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRm-W5-BUG">
+                                <rect key="frame" x="40" y="636" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AddArtIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3W6-dE-giA">
+                                <rect key="frame" x="39" y="213" width="336" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="s6K-je-jy0" appends="YES" id="Iv4-pX-QR7"/>
+                                    <outletCollection property="gestureRecognizers" destination="s6K-je-jy0" appends="YES" id="wbE-Vq-DRw"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9N-ZO-cy0">
+                                <rect key="frame" x="155" y="731" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="tRn-YB-Yqb" eventType="touchUpInside" id="f4S-N4-LJd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu9-F7-65H">
+                                <rect key="frame" x="303" y="152" width="72" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="AddArtFilledIcon"/>
+                                <connections>
+                                    <action selector="onCamera:" destination="tRn-YB-Yqb" eventType="touchUpInside" id="8pR-hl-v47"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7L9-hg-FyK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" id="fgf-bO-DlE"/>
+                    <connections>
+                        <outlet property="artTitleField" destination="VC6-C7-By3" id="7Kw-58-2Kh"/>
+                        <outlet property="dateField" destination="IRm-W5-BUG" id="dRJ-zX-LwL"/>
+                        <outlet property="descField" destination="MZq-m2-E1c" id="r8p-pK-EQ9"/>
+                        <outlet property="imageView" destination="3W6-dE-giA" id="KZ3-xN-usd"/>
+                        <outlet property="mediumField" destination="hAE-XN-8Ms" id="A9F-E8-Idt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7d-Lg-ZID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="s6K-je-jy0">
+                    <connections>
+                        <action selector="onCameraButton:" destination="tRn-YB-Yqb" id="UX4-15-mKT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4224" y="685"/>
+            <point key="canvasLocation" x="4223.188405797102" y="684.375"/>
         </scene>
         <!--Messages-->
         <scene sceneID="dOR-4N-hfE">
@@ -143,7 +210,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="350" id="cLb-fo-gUK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="350" id="cLb-fo-gUK" customClass="ArtCell" customModule="Cassiopeia" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cLb-fo-gUK" id="qB2-LM-jJR">
@@ -163,15 +230,15 @@
                                                     <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="baT-OY-Uo4">
-                                                    <rect key="frame" x="8" y="62" width="398" height="279.5"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Marinette" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgy-u4-eVZ">
                                                     <rect key="frame" x="66" y="8" width="320" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="baT-OY-Uo4">
+                                                    <rect key="frame" x="8" y="62" width="398" height="279.5"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2lq-oR-eON" firstAttribute="leading" secondItem="qB2-LM-jJR" secondAttribute="leading" constant="8" id="60h-ze-taD"/>
@@ -190,6 +257,12 @@
                                                 <constraint firstItem="Vgy-u4-eVZ" firstAttribute="leading" secondItem="2lq-oR-eON" secondAttribute="trailing" constant="8" id="qLk-sn-38V"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artImageView" destination="baT-OY-Uo4" id="4MP-UJ-8zB"/>
+                                            <outlet property="artTitleLabel" destination="cmS-n2-Dx9" id="xzh-7z-lMh"/>
+                                            <outlet property="artistLabel" destination="Vgy-u4-eVZ" id="Od8-rT-lcW"/>
+                                            <outlet property="profileImageVIew" destination="2lq-oR-eON" id="VCN-nb-zy6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -344,6 +417,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AddArtFilledIcon" width="640" height="640"/>
+        <image name="AddArtIcon" width="640" height="640"/>
         <image name="cassiopeia_title" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
