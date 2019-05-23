@@ -26,7 +26,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate,UI
     @IBAction func onSubmitButton(_ sender: Any) {
         // Create a PF Object that will be a table in the dashboard
         
-        if artTitleField.text == nil || mediumField.text == nil || descField.text == nil || dateField.text == nil{
+        if artTitleField.text != nil && mediumField.text != nil && descField.text != nil && dateField.text != nil && artTitleField.text != "" && mediumField.text != "" && descField.text != "" && dateField.text != "" {
             let artwork = PFObject(className: "Art")
             
             artwork["title"] = artTitleField.text
@@ -51,6 +51,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate,UI
                     print("bleh")
                 }
             }
+        }
+        else{
+            print("artwork not uploaded")
         }
     }
 

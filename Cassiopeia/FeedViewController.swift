@@ -13,7 +13,7 @@ import AlamofireImage
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     
-    var selectedPost: PFObject!
+//    var selectedPost: PFObject!
     
     // Create an empty array of PFObjects
     var artworks = [PFObject]()
@@ -25,7 +25,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,7 +33,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let query = PFQuery(className:"Art")
         // Allows us to load the objects: get the artist and title
-        query.includeKeys(["artist", "title"])
+//        query.includeKeys(["artist", "title"])
+        query.includeKey("artist")
         query.limit = 20
         
         query.findObjectsInBackground { (artworks, error) in
@@ -47,32 +47,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Since we are working with sections, we don't use indexPath.row to get the post, we use section
-        let artwork = artworks[section]
-        
-        // Add 2 because we also want to show the "add a comment cell
-        return artworks.count + 1
-    }
-    
-    // Give each post a section that can have any number of rows
-    func numberOfSections(in tableView: UITableView) -> Int {
         return artworks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArtCell", for: indexPath) as! ArtCell
+        
         // Grab the data from the dictionary
-        let artwork = artworks[indexPath.section]
-        
-        // The post cell is always the 0th row, so here we set the post cell
-        
-//        if indexPath.row == 0 {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ArtCell") as! ArtCell
+        let artwork = artworks[indexPath.row]
         
         let user = artwork["artist"] as! PFUser
         
         // Set the labels
         cell.artistLabel.text = user.username
         cell.artTitleLabel.text = artwork["title"] as? String
+        
+        // Set the profile image
+//        let pimageFile = user["image"] as! PFFileObject
+//        let purlString = pimageFile.url!
+//        let purl = URL(string: purlString)
+//        cell.profileImageView.af_setImage(withURL: purl!)
         
         let imageFile = artwork["image"] as! PFFileObject
         let urlString = imageFile.url!
@@ -81,27 +75,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.artImageView.af_setImage(withURL: url!)
         
         return cell
-//        } else if indexPath.row <= comments.count {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
-//
-//            let comment = comments[indexPath.row - 1]
-//            cell.commentLabel.text = comment["text"] as? String
-//
-//            let user = comment["author"] as! PFUser
-//            cell.usernameLabel.text = user.username
-//
-//            return cell
-//        } else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
-//            return cell
-//        }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        do something when this row is selected
-//        let post = posts[indexPath.section]
-    }
-
     /*
     // MARK: - Navigation
 

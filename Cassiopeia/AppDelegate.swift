@@ -11,7 +11,7 @@ import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
 
 
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let main = UIStoryboard(name: "Sara", bundle: nil)
             
             // Create an instance of the feed view controller
-            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
+            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedBarController")
             
             // there is one window per application, this is like the only use case for it. Use it so that if the user is logged in, the app opens directly to the feed view
             window?.rootViewController = feedNavigationController
