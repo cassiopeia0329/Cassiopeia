@@ -19,7 +19,7 @@ class MoreInfoViewController: UIViewController {
     @IBOutlet weak var dateMadeLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
-    var artwork = PFObject()
+    var artwork: PFObject?
     var user = PFUser()
     
     override func viewDidLoad() {
@@ -27,13 +27,13 @@ class MoreInfoViewController: UIViewController {
         
         // set the text labels
         artistLabel.text = user.username
-        artTitle.text = artwork["title"] as! String
-        mediumLabel.text = artwork["medium"] as! String
-        dateMadeLabel.text = artwork["created"] as! String
-        descLabel.text = artwork["desc"] as! String
+        artTitle.text = artwork?["title"] as! String
+        mediumLabel.text = artwork?["medium"] as! String
+        dateMadeLabel.text = artwork?["created"] as! String
+        descLabel.text = artwork?["desc"] as! String
         
         // set the art image
-        let imageFile = artwork["image"] as! PFFileObject
+        let imageFile = artwork?["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)
         artImageView.af_setImage(withURL: url!)
