@@ -32,14 +32,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-55-tAc">
-                                <rect key="frame" x="237" y="491" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <action selector="onSIgnIn:" destination="F0V-Eo-aRb" eventType="touchUpInside" id="Cuo-AL-BKo"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cassiopeia_title" translatesAutoresizingMaskIntoConstraints="NO" id="5YP-LJ-L1z">
                                 <rect key="frame" x="10" y="145" width="394" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -49,7 +41,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="onSignUp:" destination="F0V-Eo-aRb" eventType="touchUpInside" id="iWe-qb-UXk"/>
+                                    <segue destination="sjd-5i-mP5" kind="presentation" identifier="signUpSegue" id="wc7-h0-IeO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-55-tAc">
+                                <rect key="frame" x="265" y="491" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="onSIgnIn:" destination="F0V-Eo-aRb" eventType="touchUpInside" id="Cuo-AL-BKo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="1251" y="-526"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="JGG-oj-bto">
             <objects>
-                <viewController id="sjd-5i-mP5" sceneMemberID="viewController">
+                <viewController id="sjd-5i-mP5" customClass="SignUpViewController" customModule="Cassiopeia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gGC-r7-7Lc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,7 +120,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cWv-55-KmE">
                                 <rect key="frame" x="36" y="401" width="340" height="30"/>
@@ -134,7 +134,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8tD-Fc-9o4">
                                 <rect key="frame" x="144" y="529" width="121" height="29"/>
@@ -149,6 +149,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
+                                    <action selector="onSignUo:" destination="sjd-5i-mP5" eventType="touchUpInside" id="I1E-6b-VPl"/>
                                     <action selector="onSignUp:" destination="F0V-Eo-aRb" eventType="touchUpInside" id="QH8-XJ-zDg"/>
                                 </connections>
                             </button>
@@ -156,6 +157,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="s2a-2y-1xS"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="sMr-qZ-gFV" id="M3N-f0-VyD"/>
+                        <outlet property="fullNameField" destination="JkK-mD-TYG" id="00N-1B-ecI"/>
+                        <outlet property="passwordField" destination="AdF-p3-Cmg" id="jAk-Q6-pSM"/>
+                        <outlet property="userTypeSegment" destination="8tD-Fc-9o4" id="tv2-18-j7t"/>
+                        <outlet property="usernameField" destination="cWv-55-KmE" id="fRB-p8-PoZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8f-UK-b41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

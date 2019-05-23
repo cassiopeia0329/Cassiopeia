@@ -1,41 +1,48 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  Cassiopeia
 //
-//  Created by stargaze on 5/3/19.
+//  Created by stargaze on 5/23/19.
 //  Copyright © 2019 Cassiopeia. All rights reserved.
 //
 
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController {
-    
+
+class SignUpViewController: UIViewController {
+    @IBOutlet weak var fullNameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    
+    @IBOutlet weak var userTypeSegment: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
     
-    @IBAction func onSIgnIn(_ sender: Any) {
-        let username = usernameField.text!
-        let password = passwordField.text!
+    
+    @IBAction func onSignUo(_ sender: Any) {
+        // On Sign Up create a Parse User
+        let user = PFUser() //Make this a constant by using let
+        user.username = usernameField.text
+        user.password = passwordField.text
+        user["name"] = fullNameField.text
+        user.email = emailField.text
+        user["type"] = userTypeSegment.selectedSegmentIndex
         
-        PFUser.logInWithUsername(inBackground: username, password: password)
-        { (user, error) in
-            if user != nil {
+        // Sign up user
+        user.signUpInBackground { (success, error) in
+            if success {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
             }
         }
     }
-    
+
     /*
     // MARK: - Navigation
 

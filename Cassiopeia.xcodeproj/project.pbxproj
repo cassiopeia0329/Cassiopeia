@@ -15,6 +15,7 @@
 		565FDD70227CF34C00E39E93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565FDD6F227CF34B00E39E93 /* LoginViewController.swift */; };
 		565FDD72227CF9FC00E39E93 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565FDD71227CF9FC00E39E93 /* FeedViewController.swift */; };
 		5672367B227CEE32004594F8 /* Sara.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5672367A227CEE32004594F8 /* Sara.storyboard */; };
+		5693F7F22296EB8A0043EC9F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5693F7F12296EB8A0043EC9F /* SignUpViewController.swift */; };
 		B899FAC384165001FA6AF4A7 /* Pods_Cassiopeia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD5D47F5F642AC1A1B3AEB2 /* Pods_Cassiopeia.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		565FDD6F227CF34B00E39E93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		565FDD71227CF9FC00E39E93 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		5672367A227CEE32004594F8 /* Sara.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sara.storyboard; sourceTree = "<group>"; };
+		5693F7F12296EB8A0043EC9F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		78E0076B0CC9EC251388D40A /* Pods-Cassiopeia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cassiopeia.debug.xcconfig"; path = "Target Support Files/Pods-Cassiopeia/Pods-Cassiopeia.debug.xcconfig"; sourceTree = "<group>"; };
 		EAD5D47F5F642AC1A1B3AEB2 /* Pods_Cassiopeia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cassiopeia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				560BF6BC22614260005ADFF4 /* Main.storyboard */,
 				5672367A227CEE32004594F8 /* Sara.storyboard */,
 				565FDD6F227CF34B00E39E93 /* LoginViewController.swift */,
+				5693F7F12296EB8A0043EC9F /* SignUpViewController.swift */,
 				565FDD71227CF9FC00E39E93 /* FeedViewController.swift */,
 				560BF6BF22614261005ADFF4 /* Assets.xcassets */,
 				560BF6C122614261005ADFF4 /* LaunchScreen.storyboard */,
@@ -228,6 +231,7 @@
 				560BF6BB22614260005ADFF4 /* ViewController.swift in Sources */,
 				565FDD72227CF9FC00E39E93 /* FeedViewController.swift in Sources */,
 				560BF6B922614260005ADFF4 /* AppDelegate.swift in Sources */,
+				5693F7F22296EB8A0043EC9F /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
