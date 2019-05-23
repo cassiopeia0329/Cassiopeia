@@ -66,21 +66,86 @@
             </objects>
             <point key="canvasLocation" x="448" y="-526"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Search-->
         <scene sceneID="lKc-59-PnJ">
             <objects>
-                <viewController id="NOc-63-rOh" customClass="FeedViewController" customModule="Cassiopeia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NOc-63-rOh" customClass="SearchViewController" customModule="Cassiopeia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EOW-8T-lUu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="r6j-8n-NdO"/>
                     </view>
+                    <tabBarItem key="tabBarItem" tag="-2" title="Search" id="1eS-ga-fd5"/>
                     <navigationItem key="navigationItem" id="213-TU-Ax3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soX-9Y-ZLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2071" y="-526"/>
+            <point key="canvasLocation" x="3422" y="684"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="s3h-06-IOC">
+            <objects>
+                <viewController id="tRn-YB-Yqb" customClass="UploadViewController" customModule="Cassiopeia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vsj-UP-eom">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7L9-hg-FyK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" id="fgf-bO-DlE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7d-Lg-ZID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4224" y="685"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="dOR-4N-hfE">
+            <objects>
+                <viewController id="aF0-nA-ZpT" customClass="MessagesViewController" customModule="Cassiopeia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vNW-Rs-YNj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WZP-aQ-qS4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Messages" id="xbS-6a-LXu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWw-pR-TWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5073" y="683"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="xai-Nk-5t6">
+            <objects>
+                <viewController id="r5J-Jc-k66" customClass="ProfileViewController" customModule="Cassiopeia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eQA-hl-DGI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kn1-Op-z4B"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="9hr-KK-lbW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2Z-7i-owT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5939" y="682"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ssa-iL-7RT">
+            <objects>
+                <viewController id="7NP-2j-YYE" customClass="FeedViewController" customModule="Cassiopeia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v9g-Ws-aau">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hzW-dk-K98"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="I0y-Mj-R2E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Tz-n9-mRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2681" y="684"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dv0-K6-atQ">
@@ -93,7 +158,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="NOc-63-rOh" kind="relationship" relationship="rootViewController" id="iqR-C6-qQ2"/>
+                        <segue destination="1WN-ML-Lt9" kind="relationship" relationship="rootViewController" id="iqR-C6-qQ2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29e-EU-qMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -164,7 +229,7 @@
                         <outlet property="passwordField" destination="AdF-p3-Cmg" id="jAk-Q6-pSM"/>
                         <outlet property="userTypeSegment" destination="8tD-Fc-9o4" id="tv2-18-j7t"/>
                         <outlet property="usernameField" destination="cWv-55-KmE" id="fRB-p8-PoZ"/>
-                        <segue destination="NOc-63-rOh" kind="presentation" identifier="signedUpSegue" id="Te4-Vy-kee"/>
+                        <segue destination="1WN-ML-Lt9" kind="presentation" identifier="signedUpSegue" id="Te4-Vy-kee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8f-UK-b41" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,11 +254,33 @@
             </objects>
             <point key="canvasLocation" x="448" y="232"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fmt-SN-VCf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1WN-ML-Lt9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="OmH-bA-Y6G"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PO1-c5-Ghj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NOc-63-rOh" kind="relationship" relationship="viewControllers" id="sAk-yI-Uwj"/>
+                        <segue destination="7NP-2j-YYE" kind="relationship" relationship="viewControllers" id="R5o-dP-zsY"/>
+                        <segue destination="tRn-YB-Yqb" kind="relationship" relationship="viewControllers" id="HjI-hb-xFM"/>
+                        <segue destination="aF0-nA-ZpT" kind="relationship" relationship="viewControllers" id="2UQ-uD-VZZ"/>
+                        <segue destination="r5J-Jc-k66" kind="relationship" relationship="viewControllers" id="bCW-Ur-5E1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lzh-tT-DEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3601" y="-137"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cassiopeia_title" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Te4-Vy-kee"/>
+        <segue reference="iqR-C6-qQ2"/>
     </inferredMetricsTieBreakers>
 </document>
