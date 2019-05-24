@@ -23,12 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = initialViewController
         
         // Connect the client side application with the parse server
-        Parse.initialize(
-            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-                configuration.applicationId = "Parstagram"
-                configuration.server = "https://intense-earth-85223.herokuapp.com/parse"
-            })
-        )
+//         Parse.initialize(
+//             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+//                 configuration.applicationId = "Parstagram"
+//                 configuration.server = "https://intense-earth-85223.herokuapp.com/parse"
+//             })
+//         )
+            Parse.initialize(
+                with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+                    configuration.applicationId = "Cassiopea"
+                    configuration.server = "https://sheltered-gorge-61585.herokuapp.com/parse"
+                })
+            )
         
         // Check to see if the parse user is logged in
         if PFUser.current() != nil {
