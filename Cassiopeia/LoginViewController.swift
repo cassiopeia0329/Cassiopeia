@@ -13,10 +13,13 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var backImage: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.sendSubviewToBack(backImage)
         
         // Setting the placeholder text and color
         usernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])

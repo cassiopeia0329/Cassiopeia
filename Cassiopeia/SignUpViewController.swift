@@ -16,9 +16,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var userTypeSegment: UISegmentedControl!
+    @IBOutlet weak var backImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Send the background image to the back
+        view.sendSubviewToBack(backImage)
 
         // Setting the placeholder text and color
         fullNameField.attributedPlaceholder = NSAttributedString(string: "Full Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
