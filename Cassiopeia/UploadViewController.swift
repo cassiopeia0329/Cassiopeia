@@ -52,7 +52,13 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate,UI
                     print("bleh")
                 }
             }
-//            self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+            artTitleField.text = nil
+            mediumField.text = nil
+            descField.text = nil
+            dateField.text = nil
+            imageView.image = UIImage(named: "image_placeholder")
+
+            self.performSegue(withIdentifier: "uploadedSegue", sender: nil)
         }
         else{
             print("artwork not uploaded")
