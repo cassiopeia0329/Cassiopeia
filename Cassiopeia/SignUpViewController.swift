@@ -41,6 +41,10 @@ class SignUpViewController: UIViewController {
         emailField.layer.borderColor = myColor.cgColor
         usernameField.layer.borderColor = myColor.cgColor
         passwordField.layer.borderColor = myColor.cgColor
+        
+        // Dismiss the keyboard
+        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        self.view.addGestureRecognizer(tap)
     }
     
     

@@ -32,6 +32,10 @@ class LoginViewController: UIViewController {
         let myColor = UIColor.darkGray
         usernameField.layer.borderColor = myColor.cgColor
         passwordField.layer.borderColor = myColor.cgColor
+        
+        // Dismiss the keyboard
+        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        self.view.addGestureRecognizer(tap)
     }
 
     
