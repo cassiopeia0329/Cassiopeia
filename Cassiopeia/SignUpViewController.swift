@@ -20,7 +20,23 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Setting the placeholder text and color
+        fullNameField.attributedPlaceholder = NSAttributedString(string: "Full Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        emailField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        usernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        
+        // Setting borders
+        fullNameField.layer.borderWidth = 1.0
+        emailField.layer.borderWidth = 1.0
+        usernameField.layer.borderWidth = 1.0
+        passwordField.layer.borderWidth = 1.0
+        
+        let myColor = UIColor.darkGray
+        fullNameField.layer.borderColor = myColor.cgColor
+        emailField.layer.borderColor = myColor.cgColor
+        usernameField.layer.borderColor = myColor.cgColor
+        passwordField.layer.borderColor = myColor.cgColor
     }
     
     

@@ -20,6 +20,24 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Setting the placeholder text and color
+        artTitleField.attributedPlaceholder = NSAttributedString(string: "Artwork Title", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        mediumField.attributedPlaceholder = NSAttributedString(string: "Medium", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        descField.attributedPlaceholder = NSAttributedString(string: "Description", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        dateField.attributedPlaceholder = NSAttributedString(string: "Date Created", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        
+        // Setting borders
+        artTitleField.layer.borderWidth = 1.0
+        mediumField.layer.borderWidth = 1.0
+        descField.layer.borderWidth = 1.0
+        dateField.layer.borderWidth = 1.0
+        
+        let myColor = UIColor.darkGray
+        artTitleField.layer.borderColor = myColor.cgColor
+        mediumField.layer.borderColor = myColor.cgColor
+        descField.layer.borderColor = myColor.cgColor
+        dateField.layer.borderColor = myColor.cgColor
+        
         let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
         self.view.addGestureRecognizer(tap)
     }

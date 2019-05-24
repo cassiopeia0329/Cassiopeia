@@ -17,8 +17,18 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Setting the placeholder text and color
+        usernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        
+        // Setting borders
+        usernameField.layer.borderWidth = 1.0
+        passwordField.layer.borderWidth = 1.0
+        
+        let myColor = UIColor.darkGray
+        usernameField.layer.borderColor = myColor.cgColor
+        passwordField.layer.borderColor = myColor.cgColor
     }
 
     

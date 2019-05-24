@@ -31,6 +31,15 @@ class MoreInfoViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Setting the placeholder text and color
+        offerField.attributedPlaceholder = NSAttributedString(string: "$", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        
+        // Setting borders
+        offerField.layer.borderWidth = 1.0
+        
+        let myColor = UIColor.darkGray
+        offerField.layer.borderColor = myColor.cgColor
+        
         // set the text labels
         artistLabel.text = user.username
         artTitle.text = artwork?["title"] as! String
