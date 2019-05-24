@@ -19,8 +19,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate,UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        self.view.addGestureRecognizer(tap)
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
@@ -51,6 +52,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate,UI
                     print("bleh")
                 }
             }
+//            self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
         }
         else{
             print("artwork not uploaded")
