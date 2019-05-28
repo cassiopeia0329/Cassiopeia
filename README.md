@@ -8,8 +8,7 @@
 2. [Schema](#Schema)
 
 ## Walkthrough
-<img src="https://i.imgur.com/ST5cvrU.gif" width=300 alt="login">
-<img src="https://i.imgur.com/VHJfz0e.gif" width=300 alt="submitting an offer">
+<img src="https://i.imgur.com/ST5cvrU.gif" width=300 alt="login"><img src="https://i.imgur.com/VHJfz0e.gif" width=300 alt="submitting an offer">
 
 ## Overview
 ### Description
